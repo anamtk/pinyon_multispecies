@@ -39,6 +39,15 @@ species2 <- species %>%
   dplyr::select(SCIENTIFIC.NAME, Order2, Family2, Trophic.Niche, Mass) %>%
   filter(Trophic.Niche %in% c("Granivore", "Invertivore",
                               "Omnivore"))
+
+
+# How many are there? -----------------------------------------------------
+
+species %>%
+  filter(!str_detect(SCIENTIFIC.NAME, "sp.")) %>%
+  filter(!str_detect(SCIENTIFIC.NAME, " x ")) %>%
+  filter(!str_detect(SCIENTIFIC.NAME, "/")) %>%
+  tally()
   
 # Clean -------------------------------------------------------------------
 
