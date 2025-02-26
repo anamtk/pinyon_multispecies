@@ -33,7 +33,7 @@ set.seed(1)
 
 # load ebird --------------------------------------------------------------
 
-ebird <- read.csv(here('data',
+ebird <- read.csv(here('data_clean',
                        'ebird_data',
                        'cleaned_data',
                        'all_ebird_data.csv'))
